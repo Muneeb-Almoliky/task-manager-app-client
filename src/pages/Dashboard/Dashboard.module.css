@@ -1,0 +1,167 @@
+.title {
+  text-transform: capitalize;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--container-bg-color);
+  color: var(--text-color);
+  border-radius: 5px;
+}
+
+.container {
+  background-color: var(--container-bg-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(455px, 1fr));
+  gap: 2rem;
+  margin: 0;
+  max-height: calc(100vh - 240px);
+  overflow-y: auto;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.chartContainer {
+  margin-top: 20px;
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--container-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 330px;
+  max-height: 330px;
+}
+
+.chartContainer canvas {
+  background-color: var(--body-bg-color);
+  max-width: 100%;
+}
+
+.taskStatistics,
+.tasksTotal {
+  flex-grow: 1;
+  margin-top: 20px;
+  min-height: 330px;
+  display: flex;
+  border: 1px solid #ccc;
+  justify-content: center;
+  padding: 20px;
+  gap: 1rem;
+  background-color: var(--container-bg-color);
+  color: var(--text-color);
+  border-radius: 5px;
+}
+
+.taskStatistics div {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 2rem;
+}
+
+.container span {
+  display: grid;
+  place-items: center;
+  height: 20px;
+  width: 30px;
+  border: 1px solid #ccc;
+  border-radius: 50% !important;
+}
+
+.tasksTotal span {
+  height: 50px;
+  width: 50px;
+}
+
+.taskStatistics span,
+.tasksTotal span {
+  aspect-ratio: 1;
+}
+
+.tasksTotal > p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 1rem;
+  border-radius: 5px;
+  min-height: 150px;
+  padding: 20px;
+  background: var(--body-bg-color);
+}
+
+.taskStatistics > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.taskStatistics div * {
+  font-weight: bold;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 15px 10px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.toggleArchived {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggleArchived:hover {
+  background-color: #0056b3;
+}
+
+.tippy {
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+}
+
+@media (max-width: 700px) {
+  .dashboard .container {
+    background-color: var(--container-bg-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .chartContainer {
+    width: 275px;
+    flex-grow: 1;
+  }
+
+  .taskStatistics {
+    width: 275px;
+  }
+
+  .taskStatistics div {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

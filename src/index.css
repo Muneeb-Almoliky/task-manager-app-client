@@ -1,0 +1,110 @@
+:root {
+  --clr-neutral-100: hsl(209, 23%, 22%);
+  --clr-neutral-150: hsl(209, 23%, 15%);
+  --clr-neutral-200: hsl(207, 26%, 17%);
+  --clr-neutral-300: hsl(200, 15%, 8%);
+  --clr-neutral-400: rgb(188, 188, 188);
+  --clr-neutral-450: hsl(0, 0%, 95%);
+  --clr-neutral-500: hsl(0, 0%, 98%);
+  --clr-neutral-600: hsl(0, 0%, 100%);
+
+  --body-bg-color: var(--clr-neutral-600);
+  --text-color: #000000;
+  --container-bg-color: var(--clr-neutral-500);
+  --bg-color-hover: var(--clr-neutral-450);
+  --auth-btn-bg-color: var(--clr-neutral-400);
+  --auth-btn-bg-color-active: var(--clr-neutral-600);
+}
+
+[data-theme="dark"] {
+  --body-bg-color: var(--clr-neutral-200);
+  --text-color: #ffffff;
+  --container-bg-color: var(--clr-neutral-100);
+  --bg-color-hover: var(--clr-neutral-150);
+  --auth-btn-bg-color: var(--clr-neutral-100);
+  --auth-btn-bg-color-active: var(--clr-neutral-200);
+}
+
+/* General reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  transition: background-color 0.3s ease-in-out;
+}
+
+image,
+svg,
+video {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  background-color: var(--body-bg-color);
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+  border-radius: 10px;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  padding-inline: 10px;
+  background-color: var(--body-bg-color);
+}
+
+/* Toast and humberger styles */
+
+.Toastify__toast--success {
+  color: var(--text-color) !important;
+  background-color: var(--body-bg-color) !important;
+}
+
+.Toastify__close-button {
+  color: var(--text-color) !important;
+  opacity: 1 !important;
+}
+
+.hamburger-react {
+  transform: scale(0.8) !important;
+}
+
+/* Media Queries */
+
+@media (max-width: 1000px) {
+  .content {
+    margin-left: 35px;
+  }
+}
+
+@media (max-width: 410px) {
+  .content {
+    margin-inline: 0px;
+  }
+
+  .hamburger-react {
+    transform: scale(0.6) !important;
+  }
+}

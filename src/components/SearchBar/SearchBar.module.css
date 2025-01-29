@@ -1,0 +1,104 @@
+.searchContainer {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    color: var(--text-color);
+    position: relative;
+  }
+  .searchInput {
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    flex-grow: 1;
+  }
+  
+  .searchContainer div {
+    display: flex;
+    align-items: center;
+    height: 33px;
+    border-radius:  0 4px 4px 0;
+    margin-left: -20%;
+  }
+  
+  .searchContainer svg {
+    color: gray;  
+  }
+  
+  [data-theme = "dark"] .searchInput::placeholder {
+    color: #ffffffd3;
+  }
+  
+  [data-theme = "dark"] .searchContainer svg {
+    color: #ffffffd3;
+  }
+
+  @media (max-width: 700px) {
+      .searchInput {
+        margin: 0;
+        width: 0;
+        opacity: 0;
+        z-index: 99;
+      }
+
+      .searchContainerActive::before {
+        content: "";
+        position: absolute;
+        background-color: var(--container-bg-color);
+        left: -20rem;
+        right: -10rem;
+        top: -10rem;
+        bottom: -2rem;
+        z-index: 99;
+      }
+    
+      .searchContainerActive {
+        left: -10vw;
+        width: 250px;
+        width: 60vw;
+      }
+    
+      .searchInputActive {
+        display: block;
+        height: 25px;
+        width: 100%;
+        opacity: 1;
+        transition: all .3s;
+        position: relative;
+        padding-left: 3rem;
+      }
+
+     
+      .searchContainer div {
+        border: 1px solid #ccc;
+        background-color: var(--body-bg-color);
+        width: 30px;
+        height: 35px;
+        border-radius: 4px;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .searchContainerActive div::before {
+        content: "<";
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        width: 30px;
+        height: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ccc;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 99;
+      }
+
+    }      
+  
+    
+     
+  

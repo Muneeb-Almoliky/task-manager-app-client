@@ -1,0 +1,13 @@
+.tasksContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  max-height: calc(100vh - 235px);
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.noTasks {
+  color: var(--text-color);
+  font-size: 20px;
+}

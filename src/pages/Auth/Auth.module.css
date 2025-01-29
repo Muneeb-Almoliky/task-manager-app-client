@@ -1,0 +1,39 @@
+.authContainer {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.authContainerBox {
+  flex-basis: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+  background-color: var(--container-bg-color);
+}
+
+.authContainerBox form {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  padding: 20px;
+}
+
+.authOptions {
+  display: flex;
+}
+
+.authOptions button {
+  width: 50%;
+  border: none;
+  padding: 10px;
+  color: rgb(35, 38, 47);
+  background-color: var(--auth-btn-bg-color);
+  color: var(--text-color);
+}
+
+.authOptions button.active {
+  background-color: var(--auth-btn-bg-color-active);
+}

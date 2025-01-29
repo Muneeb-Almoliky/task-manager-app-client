@@ -1,0 +1,63 @@
+
+.profile {
+    position: relative;
+    width: fit-content;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email {
+    font-size: 10px;
+}
+
+.editBtn {
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 3px;
+    margin-top: 5px;
+}
+
+.noProfilePicture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #8080804d;
+    display: grid;
+    place-items: center;
+}
+
+.editProfile {
+    position: relative;
+    display: grid;
+    gap: 4rem;
+}
+
+.editProfile > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editProfile div button {
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+.uploadBtn {
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    font-size: 1rem !important;
+}
+
+
+
+
+
+

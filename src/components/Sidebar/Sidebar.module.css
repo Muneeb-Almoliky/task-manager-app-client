@@ -1,0 +1,88 @@
+.sidebar {
+  min-width: 300px;
+  background-color: var(--container-bg-color) !important;
+  position: relative;
+  margin-left: -265px;
+  transition: margin 0.5s ease-in-out;
+  margin-top: 90px;
+  border-radius: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 9;
+}
+
+.hamburger {
+  position: absolute;
+  width: 48px;
+  top: 12px;
+  right: -5px;
+  color: var(--text-color);
+}
+
+.sidebar h2 {
+  margin-left: 15px;
+  margin-block: 20px;
+}
+
+.sidebar ul {
+  margin-top: 3rem;
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  display: block;
+  padding: 10px 20px;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: var(--bg-color-hover);
+}
+
+.sidebar li.active {
+  background-color: var(--bg-color-hover);
+}
+
+@media (max-width: 1000px) {
+  .sidebar {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+  }
+
+  .sidebarActive + .overlay {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: #0000005d;
+  }
+}
+
+@media (max-width: 410px) {
+  .sidebar {
+    margin-left: -320px;
+    top: -5.7rem;
+  }
+
+  .hamburger {
+    top: 15px;
+    right: -62px;
+  }
+
+  .sidebarActive .hamburger {
+    right: 0;
+  }
+}
+
+.sidebarActive {
+  margin-left: -5px;
+  transform: translateX(0);
+}

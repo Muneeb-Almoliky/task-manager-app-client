@@ -1,0 +1,73 @@
+.listHeader {
+  background-color: var(--container-bg-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--container-bg-color) 2px solid;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: calc(100vw-40px);
+  border-radius: 5px;
+  overflow-x: hidden;
+}
+
+.listHeader h1 {
+  margin: 0;
+  font-size: 1.5em;
+  color: var(--text-color);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttonContainer div {
+  display: flex;
+  align-items: center;
+}
+
+.buttonContainer button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: transparent;
+}
+
+.signoutBtn {
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  border: 1px solid #ccc !important;
+  padding-block: 0 !important;
+  height: 35px;
+}
+
+.buttonContainer button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 700px) {
+  .listHeader {
+    padding-inline: 5px 0;
+  }
+  .signoutBtn span {
+    display: none;
+  }
+}
+
+@media (max-width: 410px) {
+  .listHeader h1 {
+    padding-left: 25px;
+  }
+}

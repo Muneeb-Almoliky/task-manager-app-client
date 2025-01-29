@@ -1,0 +1,50 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modal {
+  flex-basis: 500px;
+  background-color: var(--container-bg-color);
+  color: var(--text-color);
+  margin-inline: 15px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+}
+
+.formTitleContainer button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formTitleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  margin: 11px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  border: 1.5px solid rgb(230, 232, 236);
+}
+
+input::placeholder {
+  color: #ccc;
+}

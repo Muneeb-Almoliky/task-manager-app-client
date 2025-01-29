@@ -1,0 +1,30 @@
+.tasksHeader {
+  text-transform: capitalize;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--container-bg-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.addTask {
+  padding-inline: 10px;
+  padding-block: 10px;
+  border-radius: 10px;
+  background-color: var(--body-bg-color);
+  border: 1px solid #ccc;
+  color: var(--text-color);
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .tasksHeader {
+    padding-inline: 5px;
+  }
+}
