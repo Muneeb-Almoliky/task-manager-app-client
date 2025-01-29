@@ -5,6 +5,7 @@ import { BeatLoader } from "react-spinners";
 import Auth from "./pages/Auth/Auth";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import TaskList from "./pages/TaskList/TaskList";
+import ErrorPage from './pages/ErrorPage/ErrorPage'
 import Sidebar from "./components/Sidebar/Sidebar";
 import useAuth from "./hooks/useAuth";
 import useRefreshToken from "./hooks/useRefreshToken";
@@ -93,6 +94,7 @@ const App = () => {
               auth?.accessToken ? <TaskList /> : <Navigate to="/login" />
             }
           />
+          <Route path="*" element={ <ErrorPage /> }/>
         </Routes>
       </div>
     </div>
