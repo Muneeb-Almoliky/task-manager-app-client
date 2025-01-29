@@ -66,7 +66,7 @@ const Auth = () => {
           console.log(response.data.accessToken);
           return { ...prev, accessToken: response.data.accessToken };
         });
-        setCookie("email", email, { path: "/", maxAge: 3600 * 30 }); // Max age is 1 hour, adjust as necessary
+        setCookie("email", email, { path: "/", maxAge: 60 * 60 * 24 * 1000}); 
       }
     } catch (err) {
       console.log(error);
