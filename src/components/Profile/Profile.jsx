@@ -99,7 +99,7 @@ const Profile = ({ isAuthenticating, isOpen, setOpen }) => {
       <div>
         {profile.profile_picture ? (
           <img
-            src={`http://localhost:5000${profile.profile_picture}`}
+            src={`${process.env.VITE_API_URL + profile.profile_picture}`}
             alt="Profile"
             style={{ width: "70px", height: "70px", borderRadius: "50%" }}
           />
