@@ -12,8 +12,8 @@
   --text-color: #000000;
   --container-bg-color: var(--clr-neutral-500);
   --bg-color-hover: var(--clr-neutral-450);
-  --auth-btn-bg-color: var(--clr-neutral-400);
-  --auth-btn-bg-color-active: var(--clr-neutral-600);
+  --auth-btn-bg-color: var(--clr-neutral-600);
+  --auth-btn-bg-color-active: var(--clr-neutral-400);
 }
 
 [data-theme="dark"] {
@@ -25,7 +25,7 @@
   --auth-btn-bg-color-active: var(--clr-neutral-200);
 }
 
-/* General reset */
+/* General reset and styles */
 
 * {
   margin: 0;

@@ -105,7 +105,7 @@ const Profile = ({ isAuthenticating, isOpen, setOpen }) => {
           />
 
         ) : (
-          <div className={styles.noProfilePicture} ><FontAwesomeIcon icon={faUser}/></div>
+          <div className={styles.noProfilePicture} ><FontAwesomeIcon icon={faUser} style={{height: '50%', color: 'white'}}/></div>
         )}
       </div>
       <p className={styles.email}>{userEmail}</p>

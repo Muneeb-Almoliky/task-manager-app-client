@@ -56,14 +56,13 @@
     
       .searchContainerActive {
         left: -10vw;
-        width: 250px;
         width: 60vw;
       }
     
       .searchInputActive {
         display: block;
         height: 25px;
-        width: 100%;
+        width: 100% ;
         opacity: 1;
         transition: all .3s;
         position: relative;
@@ -82,12 +81,16 @@
       }
 
       .searchContainerActive div::before {
-        content: "<";
+        content: "";
+        background-color: gray;
+        mask-image: url("../../assets/thin-arrow-left-icon.svg");
+        mask-repeat: no-repeat;
+        mask-size: contain;
         position: absolute;
-        top: 3px;
-        left: 5px;
-        width: 30px;
-        height: 33px;
+        top: 8px;
+        left: -40px;
+        height: 30px;
+        width: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -98,7 +101,10 @@
       }
 
     }      
-  
     
-     
+@media screen and (min-width: 410px) and (max-width: 500px) {
+  .searchContainerActive {
+    width: 80vw;
+  }
+}     
   

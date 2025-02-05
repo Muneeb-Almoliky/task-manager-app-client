@@ -9,6 +9,10 @@ A sleek, responsive, and user-friendly task management app built with React and 
 - Search through tasks for easier management.
 - Sign up or log in to manage personalized data.
 
+
+## Live Demo  
+🚀 Check out the live version here: [Task Manager App](https://muneeb-almoliky-task-manager-app.vercel.app)
+
 ## Features
 
 1. **Task Management**:
