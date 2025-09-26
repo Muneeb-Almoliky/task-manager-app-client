@@ -1,6 +1,6 @@
 import { useCookies } from "react-cookie";
 import { useState, useEffect } from "react";
-import { axiosPrivate } from "../../api/axios";
+import { axiosPrivate, getBaseUrl } from "../../api/axios";
 import useAuth from "../../hooks/useAuth";
 import styles from './Profile.module.css';
 import Modal from "../../utils/Modal/Modal";
@@ -99,7 +99,7 @@ const Profile = ({ isAuthenticating, isOpen, setOpen }) => {
       <div>
         {profile.profile_picture ? (
           <img
-            src={`${process.env.VITE_API_URL + profile.profile_picture}`}
+            src={`${getBaseUrl() + profile.profile_picture}`}
             alt="Profile"
             style={{ width: "70px", height: "70px", borderRadius: "50%" }}
           />
